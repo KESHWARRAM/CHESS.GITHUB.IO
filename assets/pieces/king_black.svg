@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Black King -->
+  <g id="bking">
+    <circle cx="50" cy="25" r="10" fill="black" stroke="black" stroke-width="1.5"/>
+    <path d="M 48 15 L 48 10 L 52 10 L 52 15" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M 45 12 L 40 10 L 42 15 Z" fill="white"/>
+    <path d="M 55 12 L 60 10 L 58 15 Z" fill="white"/>
+    <path d="M 40 35 L 45 50 L 55 50 L 60 35 Z" fill="black" stroke="black" stroke-width="1.5"/>
+    <path d="M 35 55 L 65 55 L 62 85 L 38 85 Z" fill="black" stroke="black" stroke-width="1.5"/>
+  </g>
+</svg>

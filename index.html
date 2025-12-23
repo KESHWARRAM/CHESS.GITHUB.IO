@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="description" content="Professional Chess Game - Play vs AI with three difficulty levels">
+    <title>Chess Game</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a1a1a' width='100' height='100'/><circle cx='50' cy='50' r='30' fill='%2300d084'/></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>♟ Chess Game</h1>
+            <div class="header-controls">
+                <button id="resetBtn" class="btn btn-secondary">New Game</button>
+                <a href="rules.html" class="btn btn-secondary">Rules</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-wrapper">
+                <div class="sidebar left-sidebar">
+                    <div class="info-panel">
+                        <h3>Game Status</h3>
+                        <div id="gameStatus" class="status-display">
+                            <p id="turnDisplay">White to move</p>
+                            <p id="checkDisplay" class="hidden">♔ Check!</p>
+                        </div>
+                    </div>
+
+                    <div class="control-panel">
+                        <h3>Difficulty</h3>
+                        <div class="difficulty-selector">
+                            <button class="difficulty-btn active" data-level="easy">Easy</button>
+                            <button class="difficulty-btn" data-level="medium">Medium</button>
+                            <button class="difficulty-btn" data-level="hard">Hard</button>
+                        </div>
+                    </div>
+
+                    <div class="info-panel">
+                        <h3>Captured Pieces</h3>
+                        <div id="capturedWhite" class="captured-pieces">
+                            <span class="captured-label">White:</span>
+                            <div id="capturedWhiteList" class="piece-list"></div>
+                        </div>
+                        <div id="capturedBlack" class="captured-pieces">
+                            <span class="captured-label">Black:</span>
+                            <div id="capturedBlackList" class="piece-list"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="board-container">
+                    <div id="chessBoard" class="chess-board"></div>
+                    <div class="board-labels">
+                        <div class="files">
+                            <span>A</span><span>B</span><span>C</span><span>D</span>
+                            <span>E</span><span>F</span><span>G</span><span>H</span>
+                        </div>
+                        <div class="ranks">
+                            <span>8</span><span>7</span><span>6</span><span>5</span>
+                            <span>4</span><span>3</span><span>2</span><span>1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar right-sidebar">
+                    <div class="info-panel">
+                        <h3>Move History</h3>
+                        <div id="moveHistory" class="move-history"></div>
+                    </div>
+
+                    <div class="info-panel">
+                        <h3>Game Info</h3>
+                        <div id="gameInfo" class="game-info">
+                            <p>White: Player</p>
+                            <p id="blackPlayer">Black: Computer (Easy)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="promotionModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Choose Promotion Piece</h3>
+                <div class="promotion-choices">
+                    <button class="promote-btn" data-piece="Q">♕ Queen</button>
+                    <button class="promote-btn" data-piece="R">♖ Rook</button>
+                    <button class="promote-btn" data-piece="B">♗ Bishop</button>
+                    <button class="promote-btn" data-piece="N">♘ Knight</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameOverModal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Game Over</h2>
+                <p id="gameOverMessage"></p>
+                <button id="gameOverBtn" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/pieces.js"></script>
+    <script src="js/rules.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

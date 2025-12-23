@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Chess Rules & Controls</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>♟ Chess Rules & Controls</h1>
+            <div class="header-controls">
+                <a href="index.html" class="btn btn-secondary">Back to Game</a>
+            </div>
+        </header>
+
+        <main class="rules-content">
+            <section class="rules-section">
+                <h2>Game Controls</h2>
+                <div class="rules-text">
+                    <h3>🖱️ Desktop</h3>
+                    <ul>
+                        <li><strong>Click</strong> a piece to select it</li>
+                        <li><strong>Click</strong> a highlighted square to move</li>
+                        <li><strong>Click</strong> another piece to switch selection</li>
+                    </ul>
+                    <h3>📱 Mobile / Tablet</h3>
+                    <ul>
+                        <li><strong>Tap</strong> a piece to select it</li>
+                        <li><strong>Tap</strong> a highlighted square to move</li>
+                        <li><strong>Tap</strong> another piece to switch selection</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <h2>Basic Rules</h2>
+                <div class="rules-text">
+                    <h3>The Board</h3>
+                    <ul>
+                        <li>8×8 checkered board</li>
+                        <li>Light square always on bottom right</li>
+                        <li>Files labeled A–H (left to right)</li>
+                        <li>Ranks labeled 1–8 (bottom to top)</li>
+                    </ul>
+
+                    <h3>Starting Position</h3>
+                    <ul>
+                        <li>White pieces on ranks 1–2</li>
+                        <li>Black pieces on ranks 7–8</li>
+                        <li>White moves first</li>
+                    </ul>
+
+                    <h3>Turn-Based Play</h3>
+                    <ul>
+                        <li>Players alternate moves</li>
+                        <li>You (White) move first</li>
+                        <li>Computer (Black) responds automatically</li>
+                        <li>You cannot move during computer's turn</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <h2>Piece Movement</h2>
+                <div class="rules-text">
+                    <h3>♙ Pawn</h3>
+                    <ul>
+                        <li>Moves forward 1 square (2 squares on first move)</li>
+                        <li>Captures diagonally forward 1 square</li>
+                        <li>Promotes to Q/R/B/N when reaching opposite end</li>
+                    </ul>
+
+                    <h3>♖ Rook</h3>
+                    <ul>
+                        <li>Moves horizontally or vertically any number of squares</li>
+                        <li>Cannot jump over pieces</li>
+                    </ul>
+
+                    <h3>♘ Knight</h3>
+                    <ul>
+                        <li>Moves in an "L" shape: 2 squares + 1 square perpendicular</li>
+                        <li>Can jump over other pieces</li>
+                    </ul>
+
+                    <h3>♗ Bishop</h3>
+                    <ul>
+                        <li>Moves diagonally any number of squares</li>
+                        <li>Cannot jump over pieces</li>
+                    </ul>
+
+                    <h3>♕ Queen</h3>
+                    <ul>
+                        <li>Moves horizontally, vertically, or diagonally any number of squares</li>
+                        <li>Cannot jump over pieces</li>
+                        <li>Most powerful piece</li>
+                    </ul>
+
+                    <h3>♔ King</h3>
+                    <ul>
+                        <li>Moves 1 square in any direction</li>
+                        <li>Cannot move into check</li>
+                        <li>Can castle under special conditions</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <h2>Special Rules</h2>
+                <div class="rules-text">
+                    <h3>Castling</h3>
+                    <ul>
+                        <li>King moves 2 squares toward rook; rook moves to opposite side</li>
+                        <li>Only if:
+                            <ul>
+                                <li>King has never moved</li>
+                                <li>Rook has never moved</li>
+                                <li>No pieces between king and rook</li>
+                                <li>King is not in check</li>
+                                <li>King doesn't pass through check</li>
+                            </ul>
+                        </li>
+                        <li>Two types: Kingside (O-O) and Queenside (O-O-O)</li>
+                    </ul>
+
+                    <h3>En Passant</h3>
+                    <ul>
+                        <li>Pawn capture on opponent's double-push advance</li>
+                        <li>Only possible immediately after opponent's 2-square pawn move</li>
+                    </ul>
+
+                    <h3>Pawn Promotion</h3>
+                    <ul>
+                        <li>Pawn reaching opposite end must promote</li>
+                        <li>Choose: Queen, Rook, Bishop, or Knight</li>
+                        <li>Queen is usually strongest choice</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <h2>Win & Draw Conditions</h2>
+                <div class="rules-text">
+                    <h3>Checkmate</h3>
+                    <ul>
+                        <li>King is in check AND cannot escape</li>
+                        <li>Checking player wins</li>
+                    </ul>
+
+                    <h3>Stalemate</h3>
+                    <ul>
+                        <li>King is NOT in check but has no legal moves</li>
+                        <li>Game is a draw</li>
+                    </ul>
+
+                    <h3>Insufficient Material</h3>
+                    <ul>
+                        <li>Neither player has enough pieces to checkmate</li>
+                        <li>Game is a draw (e.g., King vs King)</li>
+                    </ul>
+
+                    <h3>Resignation</h3>
+                    <ul>
+                        <li>Click "New Game" to start a new game at any time</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <h2>AI Difficulty Levels</h2>
+                <div class="rules-text">
+                    <h3>🟢 Easy</h3>
+                    <ul>
+                        <li>Computer plays random legal moves</li>
+                        <li>Beginner friendly</li>
+                        <li>No strategic thinking</li>
+                    </ul>
+
+                    <h3>🟡 Medium</h3>
+                    <ul>
+                        <li>Computer uses Minimax algorithm (2–3 plies deep)</li>
+                        <li>Considers piece values and basic tactics</li>
+                        <li>Plays like an intermediate player</li>
+                        <li>Makes occasional imperfect moves</li>
+                    </ul>
+
+                    <h3>🔴 Hard</h3>
+                    <ul>
+                        <li>Computer uses Minimax with Alpha-Beta Pruning (deeper search)</li>
+                        <li>Advanced evaluation: material, king safety, center control, mobility</li>
+                        <li>Plays like an advanced intermediate player</li>
+                        <li>Avoids blunders and tactical mistakes</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <h2>Common Questions</h2>
+                <div class="rules-text">
+                    <h3>Can I take back a move?</h3>
+                    <p>No. Once played, moves are final. Start a new game with "New Game" button.</p>
+
+                    <h3>Why can't I move my king there?</h3>
+                    <p>The king cannot move into check (where it would be attacked). It's an illegal move.</p>
+
+                    <h3>What if my king is in check?</h3>
+                    <p>You MUST immediately move your king out of check or block/capture the attacker.</p>
+
+                    <h3>How long does the computer take?</h3>
+                    <p>Easy moves instantly. Medium takes 1–3 seconds. Hard may take 5+ seconds depending on position.</p>
+
+                    <h3>Why is a move blocked?</h3>
+                    <p>All illegal moves are prevented by the game engine. The move violates chess rules or leaves your king in check.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Official FIDE Chess Rules Enforced • Professional-Grade Engine</p>
+        </footer>
+    </div>
+</body>
+</html>
